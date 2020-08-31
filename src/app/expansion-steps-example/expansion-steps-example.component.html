@@ -1,0 +1,130 @@
+
+
+<div>
+  
+  <mat-accordion class="example-headers-align" >
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Task Details
+      </mat-panel-title>
+      <mat-panel-description>
+        Type your task name and description
+        <mat-icon>assignment</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="Task Name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Task Description">
+      </mat-form-field>
+
+    <!-- <mat-form-field>
+      <input matInput type="number" min="1" placeholder="Assign No. of people">
+    </mat-form-field> -->
+
+    <mat-action-row>
+      <button mat-raised-button  (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Assign People
+      </mat-panel-title>
+      <mat-panel-description>
+        Type the First Name and Last Name
+        <mat-icon>assignment_ind</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <!-- <textarea matInput placeholder="First Name and Last Name"></textarea> -->
+      <mat-chip-list #chipList aria-label="Fruit selection">
+          <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                   [removable]="removable" (removed)="remove(fruit)">
+            {{fruit.name}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="Add New Member..."
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+    </mat-form-field>
+
+
+  
+    <mat-action-row>
+      <button  mat-raised-button  (click)="prevStep()">Previous</button>
+      <button mat-raised-button (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Assign Timeframe
+      </mat-panel-title>
+      <mat-panel-description>
+        Enter the start date and end date of Task
+        <mat-icon>date_range</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="Start Date" [matDatepicker]="picker" (focus)="picker.open()" readonly>
+    </mat-form-field> 
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-form-field>
+        <input matInput placeholder="End Date" [matDatepicker]="picker1" (focus)="picker1.open()" readonly>
+    </mat-form-field>
+    <mat-datepicker #picker1></mat-datepicker>   
+    
+
+
+    <mat-action-row>
+        <button mat-raised-button (click)="prevStep()">Previous</button>
+        <button mat-raised-button (click)="nextStep()">Next</button>
+      </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Complete the Task
+        </mat-panel-title>
+        <mat-panel-description>
+          Enter the Name and date
+          <mat-icon>assignment_turned_in</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+  
+      <mat-form-field>
+          <input matInput placeholder="First and Last Name">
+        </mat-form-field>
+     
+      <mat-form-field>
+          <input matInput placeholder="Date" [matDatepicker]="picker2" (focus)="picker2.open()" readonly>
+      </mat-form-field>
+      <mat-datepicker #picker2></mat-datepicker>   
+      
+  
+  
+      <mat-action-row>
+        <button mat-raised-button (click)="prevStep()">Previous</button>
+
+        <button mat-raised-button (click)="endStep()">Complete Task</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+</mat-accordion>
+
+</div>
+<mat-divider></mat-divider>

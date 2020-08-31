@@ -1,0 +1,76 @@
+
+
+<div class="flowchart-panel">
+  <div class="project-title">
+    <h2>Project ID - {{projectID}} </h2>
+  </div>
+
+  <div class="flowchart">
+<mat-divider></mat-divider>
+  <h3><b>Task I</b></h3>
+  <Task_Details></Task_Details>
+
+ 
+  <h3><b>Task II</b></h3>
+  <Task_Details></Task_Details>
+
+  <h3><b>Task III</b></h3>
+  <Task_Details></Task_Details>
+
+  </div>
+</div>
+
+
+<div class="document-upload-panel">
+        <h3>Documents Uploaded </h3>
+    <div class="file-upload">
+                      <input type="file" id="file_upload" (change)="fileChangeEvent($event)">
+                      <button mat-raised-button type="button" (click)="UploadFile()">Upload</button>
+                <button  mat-raised-button type="button" (click)="cancelUpload()">Cancel</button>
+                <div *ngIf="filesToUpload?.length > 0"><br /><p>{{filesToUpload?.length}} files selected : </p></div>
+
+                <ul>
+                    <li *ngFor="let fileName of selectedFileNames; let i = index">
+                        {{fileName}}
+                    </li>
+                </ul>
+
+                <div [innerHtml]="uploadResult"></div>
+
+                <div style="color:red">
+                    {{errorMessage}}
+                </div>
+    </div>
+      <div>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Name of the Document</mat-card-title>
+                <mat-card-subtitle>Uploaded on : 01.01.2019</mat-card-subtitle>
+                <a href="#" class="delete-document">X</a>
+            </mat-card-header>
+
+        </mat-card>
+        <br>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Name of the Document</mat-card-title>
+                <mat-card-subtitle>Uploaded on : 01.01.2019</mat-card-subtitle>
+                <a href="#" class="delete-document">X</a>
+            </mat-card-header>
+        </mat-card>
+        <br>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Name of the Document</mat-card-title>
+                <mat-card-subtitle>Uploaded on : 01.01.2019</mat-card-subtitle>
+                <a href="#" class="delete-document">X</a>
+            </mat-card-header>
+        </mat-card>
+        <br>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <button mat-raised-button type="button" (click)="UploadFile()">Move to Next Category</button>
+</div>
+
+
+

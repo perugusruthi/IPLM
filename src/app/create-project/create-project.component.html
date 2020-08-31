@@ -1,0 +1,39 @@
+<form #form="ngForm" (submit)="onSubmit(form)" class="example-form">
+<div class="create-project-popup">
+  <h1 mat-dialog-title>Create a Project</h1>
+  <mat-divider></mat-divider>
+
+  <mat-form-field class="input-element">
+    <input matInput placeholder="Project Name" name="ProjectName" #ProjectName="ngModel" 
+    [(ngModel)]="service.formData.ProjectName">
+  </mat-form-field>
+
+  <mat-form-field class="input-element">
+    <textarea matInput placeholder="Description" name="ProjectDescription" 
+    #ProjectDescription="ngModel" [(ngModel)]="service.formData.ProjectDescription"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="input-element">
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="ProjectDate" 
+    #ProjectDate="ngModel" [(ngModel)]="service.formData.ProjectDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="input-element">
+    <mat-select placeholder="Category" name="CategoryID" 
+    #CategoryID="ngModel" [(ngModel)]="service.formData.CategoryID" >
+        <mat-option *ngFor="let cat of category" [value]="cat.value">
+            {{cat.viewValue}}
+          </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Project Catchphrase"  name="Project_Catchphrases" #Project_Catchphrases="ngModel" 
+    [(ngModel)]="service.formData.Project_Catchphrases">
+  </mat-form-field>
+
+    <button class="button" style="vertical-align:middle" type="submit">Create</button>
+</div>  
+</form>

@@ -1,0 +1,41 @@
+
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Project name"  name="ProjectName" #ProjectName="ngModel" 
+    [(ngModel)]="service.formData.ProjectName">
+  </mat-form-field>
+            
+  <mat-form-field class="example-full-width">
+   <textarea matInput placeholder="Project Description" name="ProjectDescription" 
+   #ProjectDescription="ngModel" [(ngModel)]="service.formData.ProjectDescription"></textarea>
+  </mat-form-field>
+
+  
+            
+  <mat-form-field class="example-full-width">
+   <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="ProjectDate" 
+      #ProjectDate="ngModel" [(ngModel)]="service.formData.ProjectDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>            
+          <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+                
+  <mat-form-field class="example-full-width">
+    <mat-label>Choose Category Name</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let cat of category" [value]="cat.value">
+        {{cat.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+   
+<button class="button" style="vertical-align:middle" type="submit"><span>Save </span></button>
+                
+  </form>   
+
+
+
+
+
+  

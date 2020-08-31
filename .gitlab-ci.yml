@@ -1,0 +1,75 @@
+variables:
+  CLI_VERSION: 9.0.7
+
+image: trion/ng-cli-karma:${CLI_VERSION}
+
+before_script:
+  - |
+    tag_version="master";
+    base_href="/"
+    if [ "$CI_MERGE_REQUEST_ID" != "" ]; then
+      tag_version="$CI_MERGE_REQUEST_ID"
+      # export BASE_HREF="${base_href}${CI_MERGE_REQUEST_ID}/"
+    fi
+    if [ "$CI_COMMIT_TAG" != "" ]; then
+      tag_version="$CI_COMMIT_TAG"
+    fi
+
+    export TAG_VERSION=$tag_version
+    export BASE_HREF="${base_href}"
+
+stages:
+  - build
+  - test
+  - pre-deploy
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+application:build:
+  stage: build
+  script:
+    - rm package-lock.json
+    - npm install
+    - ng build --output-path dist/${BASE_HREF} --prod --base-href ${BASE_HREF}
+  artifacts:
+    expire_in: 2 hours
+    paths:
+    - dist/
+  only:
+    - merge_requests
+    - master
+    - tags
+
+docker:image:
+  stage: pre-deploy
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --context ./ --dockerfile ./Dockerfile --destination $CI_REGISTRY_IMAGE:$TAG_VERSION
+  only:
+    - merge_requests
+    - master
+    - tags
+
+docker:container:
+  stage: deploy
+  image: jpetazzo/dind
+  script:
+    - port="1$(echo ${CI_MERGE_REQUEST_ID} | cut -c1-3)"
+    - if [ $port = "1" ]; then port=1122; else port=1123; fi # In case it is not a merge request
+    - docker --tlsverify --tlscacert=$DOCKER_CA --tlscert=$DOCKER_CERT --tlskey=$DOCKER_KEY -H=$D_HP login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker --tlsverify --tlscacert=$DOCKER_CA --tlscert=$DOCKER_CERT --tlskey=$DOCKER_KEY -H=$D_HP container rm -f ${port} || true
+    - docker --tlsverify --tlscacert=$DOCKER_CA --tlscert=$DOCKER_CERT --tlskey=$DOCKER_KEY -H=$D_HP image rm -f $CI_REGISTRY_IMAGE:$TAG_VERSION || true
+    - docker --tlsverify --tlscacert=$DOCKER_CA --tlscert=$DOCKER_CERT --tlskey=$DOCKER_KEY -H=$D_HP run -d -p ${port}:80 --name ${port} $CI_REGISTRY_IMAGE:$TAG_VERSION
+    - echo "Application is deployed here http://144.91.105.170:$port"
+  only:
+    - merge_requests
+    - master
+    - tags
+
+

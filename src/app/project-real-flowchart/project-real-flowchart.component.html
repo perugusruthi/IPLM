@@ -1,0 +1,447 @@
+
+<body>
+    <style>
+        .left-col {
+            float: left;
+            width: 12%;
+        }
+
+        .center-col {
+            float: left;
+            width: 76%;
+        }
+
+        .right-col {
+            float: left;
+            width: 12%;
+        }
+
+        .btnChart {
+            background-color: #BCD7ED;
+            border-radius: 0px;
+            border: 1px solid black;
+            padding: 10px 10px;
+        }
+    </style>
+<!--    <div class="left-col">-->
+<!--        <button class="btnChart">List Of All Projects</button>-->
+<!--    </div>-->
+<!--    <div class="center-col" style="text-align: center;">-->
+<!--        <svg style="left: 0px; top: 0px; width: 100%; height: 100%; display: block; min-width: 695px; min-height: 605px; background-color: transparent; background-image: none;">-->
+<!--            <defs>-->
+<!--                <filter id="dropShadow">-->
+<!--                    <feGaussianBlur in="SourceAlpha" stdDeviation="1.7" result="blur"></feGaussianBlur>-->
+<!--                    <feOffset in="blur" dx="3" dy="3" result="offsetBlur"></feOffset>-->
+<!--                    <feFlood flood-color="#3D4574" flood-opacity="0.4" result="offsetColor"></feFlood>-->
+<!--                    <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"></feComposite>-->
+<!--                    <feBlend in="SourceGraphic" in2="offsetBlur"></feBlend>-->
+<!--                </filter>-->
+<!--            </defs>-->
+<!--            <g transformOrigin="0 0" transform="scale(1,1)translate(-62,-42)">-->
+<!--                <g></g>-->
+<!--                <g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 90 L 375 110 L 375 90 L 375 103.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 90 L 375 110 L 375 90 L 375 103.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 108.88 L 371.5 101.88 L 375 103.63 L 378.5 101.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 420 70 L 528 70 L 528 103.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 420 70 L 528 70 L 528 103.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 528 108.88 L 524.5 101.88 L 528 103.63 L 531.5 101.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="50" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 70px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Scouting Round</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 110 167.5 L 110 70 L 323.63 70" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 110 167.5 L 110 70 L 323.63 70" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 328.88 70 L 321.88 73.5 L 323.63 70 L 321.88 66.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 110 207.5 L 110 453.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 110 207.5 L 110 453.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 110 458.88 L 106.5 451.88 L 110 453.63 L 113.5 451.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="75" y="167.5" width="70" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 188px; margin-left: 76px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Deep xhtml:dive</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 150 L 375 170 L 375 150 L 375 163.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 150 L 375 170 L 375 150 L 375 163.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 168.88 L 371.5 161.88 L 375 163.63 L 378.5 161.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="110" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 130px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Concept Study 1</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 210 L 375 230 L 375 210 L 375 223.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 210 L 375 230 L 375 210 L 375 223.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 228.88 L 371.5 221.88 L 375 223.63 L 378.5 221.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 420 190 L 481.63 190" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 420 190 L 481.63 190" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 486.88 190 L 479.88 193.5 L 481.63 190 L 479.88 186.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="170" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 190px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Question Zero</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 270 L 375 283.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 270 L 375 283.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 288.88 L 371.5 281.88 L 375 283.63 L 378.5 281.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="230" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 250px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Contract</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 330 L 375 343.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 330 L 375 343.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 348.88 L 371.5 341.88 L 375 343.63 L 378.5 341.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 420 310 L 548 310 L 548 343.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 420 310 L 548 310 L 548 343.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 548 348.88 L 544.5 341.88 L 548 343.63 L 551.5 341.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="290" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 310px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Kick Off</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 390 L 375 403.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 390 L 375 403.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 408.88 L 371.5 401.88 L 375 403.63 L 378.5 401.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 330 370 L 310 370 L 323 370 L 309.37 370" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 330 370 L 310 370 L 323 370 L 309.37 370" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 304.12 370 L 311.12 366.5 L 309.37 370 L 311.12 373.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="350" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 370px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Concept Study 2</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 450 L 375 461.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 450 L 375 461.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 466.88 L 371.5 459.88 L 375 461.63 L 378.5 459.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="410" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 430px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Handing Over for predevelopment</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 500 L 375 523.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 500 L 375 523.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 528.88 L 371.5 521.88 L 375 523.63 L 378.5 521.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 420 484 L 491.63 484" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 420 484 L 491.63 484" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 496.88 484 L 489.88 487.5 L 491.63 484 L 489.88 480.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="468" width="90" height="32" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 484px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Pitch</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 375 570 L 375 583.63" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 375 570 L 375 583.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 375 588.88 L 371.5 581.88 L 375 583.63 L 378.5 581.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="530" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 550px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Actual Product Development</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="330" y="590" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 610px; margin-left: 331px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Product</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 110 500 L 110 610 L 323.63 610" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 110 500 L 110 610 L 323.63 610" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 328.88 610 L 321.88 613.5 L 323.63 610 L 321.88 606.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 110 500 L 110 550 L 323.63 550" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 110 500 L 110 550 L 323.63 550" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 328.88 550 L 321.88 553.5 L 323.63 550 L 321.88 546.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="70" y="460" width="80" height="40" fill="#fe0500" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 480px; margin-left: 71px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Contracting</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 243 370 L 223 370 L 230 370 L 216.37 370" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 243 370 L 223 370 L 230 370 L 216.37 370" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 211.12 370 L 218.12 366.5 L 216.37 370 L 218.12 373.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <ellipse cx="273" cy="370" rx="30" ry="17.5" fill="#ffe199" stroke="#000000" pointer-events="all"></ellipse>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 370px; margin-left: 244px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Stop</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="120" y="350" width="90" height="40" fill="#f1ae7e" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 370px; margin-left: 121px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">instore(Pending)</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 488 130 L 426.37 130" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 488 130 L 426.37 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 421.12 130 L 428.12 126.5 L 426.37 130 L 428.12 133.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 568 130 L 613.63 130" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 568 130 L 613.63 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 618.88 130 L 611.88 133.5 L 613.63 130 L 611.88 126.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="488" y="110" width="80" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 130px; margin-left: 489px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">PreStudy</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <ellipse cx="660" cy="130" rx="40" ry="17.5" fill="#ffe199" stroke="#000000" pointer-events="all"></ellipse>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 130px; margin-left: 621px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Stop</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <ellipse cx="523" cy="190" rx="35" ry="17.5" fill="#ffe199" stroke="#000000" pointer-events="all"></ellipse>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 68px; height: 1px; padding-top: 190px; margin-left: 489px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Stop</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 548 390 L 548 430 L 426.37 430" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 548 390 L 548 430 L 426.37 430" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 421.12 430 L 428.12 426.5 L 426.37 430 L 428.12 433.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="488" y="350" width="120" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 370px; margin-left: 489px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Application Study Smart Machine</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <path d="M 558 484 L 613.63 484" fill="none" stroke="white" stroke-miterlimit="10" pointer-events="stroke" visibility="hidden" stroke-width="9"></path>-->
+<!--                        <path d="M 558 484 L 613.63 484" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"></path>-->
+<!--                        <path d="M 618.88 484 L 611.88 487.5 L 613.63 484 L 611.88 480.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <ellipse cx="528" cy="484" rx="30" ry="17.5" fill="#ffe199" stroke="#000000" pointer-events="all"></ellipse>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 484px; margin-left: 499px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Stop</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                    <g transform="translate(0.5,0.5)" style="visibility: visible;">-->
+<!--                        <rect x="620" y="464" width="120" height="40" fill="#f1ae7e" stroke="#000000" pointer-events="all"></rect>-->
+<!--                    </g>-->
+<!--                    <g style="">-->
+<!--                        <g>-->
+<!--                            <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%">-->
+<!--                                <xhtml:div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 484px; margin-left: 621px;">-->
+<!--                                    <xhtml:div style="box-sizing: border-box; font-size: 0; text-align: center; ">-->
+<!--                                        <xhtml:div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">instore(Pending)</xhtml:div>-->
+<!--                                    </xhtml:div>-->
+<!--                                </xhtml:div>-->
+<!--                            </foreignObject>-->
+<!--                        </g>-->
+<!--                    </g>-->
+<!--                </g>-->
+<!--                <g></g>-->
+<!--                <g></g>-->
+<!--            </g>-->
+<!--        </svg>-->
+<!--    </div>-->
+<!--    <div class="right-col">-->
+<!--        <button class="btnChart" (click)=addProject()>Add New Project</button>-->
+<!--    </div>-->
+</body>

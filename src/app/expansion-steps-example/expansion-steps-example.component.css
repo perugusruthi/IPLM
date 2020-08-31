@@ -1,0 +1,32 @@
+
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+  /* border:  2px solid red; */
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+mat-form-field {
+  margin-right: 12px;
+
+}
+
+
+.example-chip-list {
+    width: 100%;
+  }
+
+.mat-raised-button{
+    /* background-color: #C0C0C0; */
+    background-color: #8FBC8B;
+    border: none;  
+  text-align: center;
+  margin-right: 8px;
+}
+  
