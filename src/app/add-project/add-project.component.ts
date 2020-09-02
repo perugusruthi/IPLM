@@ -4,6 +4,7 @@ import { AddProjectPopupComponent } from '../add-project-popup/add-project-popup
 import { Router } from '@angular/router';
 import { ProjectService } from '../services/project.service';
 import { NgForm } from '@angular/forms';
+import {Observable} from 'rxjs/Observable';
 
 export interface Category {
   value: number;
@@ -51,16 +52,23 @@ onSubmit(form: NgForm) {
   // this.insertRecord(form);
   // console.log(form.value);
   // this.onNoClick();
-  console.log('***!3434********');
-  this.service.addProject(form.value).subscribe((response) => {
-  this.addproject = response;
-  console.log('***respon********', this.addproject);
+  console.log('***!3434********', form.value);
+  // this.service.addProject(form.value).map(res => {
+  //   this.resetForm(form);
+  //   console.log('***respon********', this.addproject);
+  // });
 
-  }, (error) =>{
-    console.log('**********error*********', error);
-
-  });
-
+  this.service.addProject(form.value).subscribe(
+    (val) => {
+      this.resetForm(form);
+      console.log('POST call successful value returned in body', val);
+    },
+    response => {
+      console.log('POST call in error', response);
+    },
+    () => {
+      console.log('The POST observable is now completed.');
+    });
 }
 
 insertRecord(form: NgForm) {

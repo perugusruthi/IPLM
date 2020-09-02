@@ -27,6 +27,7 @@ export class ListProjectComponent implements OnInit {
 
 
 
+
   ngOnInit () {
     // this.http.get('./mynewfile1.txt').subscribe(
     //   data => {
@@ -38,7 +39,7 @@ export class ListProjectComponent implements OnInit {
     //     console.log(err.message);
     //   }
     // );
-    console.log("&&&&&&&&&&&", data);
+    console.log("&&&&&&&&&&&", this.listproject);
     console.log("&&&&&&&&&&&", data[0]);
 
 

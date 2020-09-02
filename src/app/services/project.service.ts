@@ -34,17 +34,13 @@ export class ProjectService {
     return this.http.get<Project[]>(this.rootURL + '/Project_Details1/' + projectID + '/');
   }
 
-  addProject(formData: Project): Observable<Project[]> {
-    // return this.http.get('/addproject/').map((addproject) =>{
-    //   console.log('**********post********', addproject);
-    //   return addproject;
-    // });
-    console.log('****service****', formData);
-    return this.http.post<Project[]>('/addproject', formData)
-      .catch(this.handleError);
+  addProject(formData: Project) {
+    this.formData = formData;
+    console.log('****service****', this.formData);
+    return this.http.post( '/addproject', this.formData);
   }
-  private handleError(error: Response | any) {
-    console.error(error.message || error);
-    return Observable.throw(error.status);
-  }
+
+  // console.log('****service****', formData);
+  // return this.http.post<Project[]>('/addproject', formData);
+
 }

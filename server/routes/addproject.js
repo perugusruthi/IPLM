@@ -2,17 +2,32 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 var fs = require('fs');
-
+var data ={};
 // POST Project Data
+data.employees = [];
 router.post('/addproject',(req,res)=>{
-//res.send("posts works");
-console.log('***********req**********',req.body.formData, typeof req.body.formData)
-  let json = JSON.stringify(req.body.formData);
-  fs.appendFile('projectdata.json', json, function (err) {
+  console.log('***********req**********',req, req.body)
+  data= {
+    ProjectName: req.body.ProjectName,
+    ProjectDescription: req.body.ProjectDescription,
+    ProjectDate: req.body.ProjectDate,
+    CategoryID: req.body.CategoryID,
+    Project_Catchphrases: req.body.Project_Catchphrases,
+  };
+  let projectentry = JSON.stringify(data);
+  fs.appendFile('projectdata.json', projectentry, function (err) {
     if (err) throw err;
     console.log('Updated!');
   });
-  res.send("Data Saved Successfully")
+
+  res.status(200).send("Data Saved Successfully");
+
+
+
+
+
+
+
 });
 
 

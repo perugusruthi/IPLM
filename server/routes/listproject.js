@@ -6,10 +6,11 @@ var fs = require('fs');
 
 //GET Project List
 router.get('/listproject',(req,res)=>{
-  let rawdata = fs.readFileSync('projectdata.json');
-  let project = JSON.parse(rawdata);
-  console.log(project);
-  res.send(project)
+  var obj = JSON.parse(fs.readFileSync('projectdata.json', 'utf8'));
+  console.log(obj);
+  res.send(obj);
+
+
 });
 
 

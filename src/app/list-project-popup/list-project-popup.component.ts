@@ -44,10 +44,7 @@ export class ListProjectPopupComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log('***popup********')
-    this.service.addProject(form.value).subscribe(addproject => {
-      this.addproject = addproject;
-    });
+    console.log('***popup********');
    // this.insertRecord(form);
    // console.log('*******************', form.value);
   //  this.onNoClick();
