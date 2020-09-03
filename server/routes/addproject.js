@@ -14,19 +14,18 @@ router.post('/addproject',(req,res)=>{
     CategoryID: req.body.CategoryID,
     Project_Catchphrases: req.body.Project_Catchphrases,
   };
-  let projectentry = JSON.stringify(data);
-  fs.appendFile('projectdata.json', projectentry, function (err) {
+ // let projectentry = JSON.stringify(data);
+  var obj = JSON.parse(fs.readFileSync('projectdata.json', 'utf8'));
+  console.log(obj);
+  var objarr =[];
+  objarr = obj;
+  objarr.push(data);
+  let projectentry = JSON.stringify(objarr);
+fs.writeFileSync('projectdata.json', projectentry, function (err) {
     if (err) throw err;
-    console.log('Updated!');
   });
 
   res.status(200).send("Data Saved Successfully");
-
-
-
-
-
-
 
 });
 

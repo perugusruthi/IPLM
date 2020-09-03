@@ -36,8 +36,12 @@ export class ProjectService {
 
   addProject(formData: Project) {
     this.formData = formData;
-    console.log('****service****', this.formData);
+    console.log('****add service****', this.formData);
     return this.http.post( '/addproject', this.formData);
+  }
+  listProject() {
+    console.log('****list service****');
+    return this.http.get( '/listproject');
   }
 
   // console.log('****service****', formData);

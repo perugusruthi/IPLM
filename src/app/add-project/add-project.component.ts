@@ -49,21 +49,13 @@ export class AddProjectComponent implements OnInit {
 
 
 onSubmit(form: NgForm) {
-  // this.insertRecord(form);
-  // console.log(form.value);
-  // this.onNoClick();
-  console.log('***!3434********', form.value);
-  // this.service.addProject(form.value).map(res => {
-  //   this.resetForm(form);
-  //   console.log('***respon********', this.addproject);
-  // });
-
   this.service.addProject(form.value).subscribe(
     (val) => {
-      this.resetForm(form);
+      this.resetForm(form);  // TODO
       console.log('POST call successful value returned in body', val);
     },
     response => {
+      this.resetForm(form);
       console.log('POST call in error', response);
     },
     () => {
