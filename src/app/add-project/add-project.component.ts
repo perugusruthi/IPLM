@@ -53,10 +53,14 @@ onSubmit(form: NgForm) {
     (val) => {
       this.resetForm(form);  // TODO
       console.log('POST call successful value returned in body', val);
+      this.onNoClick();
+
     },
     response => {
       this.resetForm(form);
       console.log('POST call in error', response);
+      this.onNoClick();
+
     },
     () => {
       console.log('The POST observable is now completed.');

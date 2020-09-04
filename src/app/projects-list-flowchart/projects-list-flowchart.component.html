@@ -1,49 +1,5 @@
-<div *ngIf="!isProjectSelected && categoryIDString != '2'">
-  <mat-form-field>   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Project">
-  </mat-form-field>
-  <div class="mat-elevation-z8 pointerCursor">
-    <table mat-table [dataSource]="dataSource" matSort>
-      <!-- ID Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row" (click)="triggerProject(row.ProjectId)"> {{row.ProjectId}} </td>
-      </ng-container>
 
-      <!-- Progress Column -->
-      <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Description </th>
-        <td mat-cell *matCellDef="let row" (click)="triggerProject(row.ProjectId)"> {{row.ProjectDescription}} </td>
-      </ng-container>
-
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let row" (click)="triggerProject(row.ProjectId)"> {{row.ProjectName}} </td>
-      </ng-container>
-
-      <!-- Color Column -->
-      <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
-        <td mat-cell *matCellDef="let row" (click)="triggerProject(row.ProjectId)"> {{row.ProjectDate}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="catchphrases">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> CatchPhrases </th>
-        <td mat-cell *matCellDef="let row" (click)="triggerProject(row.ProjectId)"> {{row.Project_Catchphrases}} </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
-      </tr>
-    </table>
-    <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]"></mat-paginator>
-  </div>
-</div>
-<div *ngIf="isProjectSelected">
-  <project-details [selectedProjectID]="selectedProjectID"></project-details>
-</div>
-
-<div *ngIf="categoryIDString == '2'">
+<div>
   <style>
     .left-col {
         float: left;
@@ -79,13 +35,9 @@
   display: block;
 }
 </style>
-<div style="border:1px solid black;padding: 6px;text-align: center;border-bottom: 0px;font-weight:600">
-Project Management Personalization in IPLM
-</div>
+  <div style="border:1px solid black;padding: 6px;text-align: center;border-bottom: 0px;font-weight:600">
+  </div>
 <div style="padding:5px;border:1px solid black;min-height: 600px;">
-<div class="left-col">
-  <button class="btnChart" (click)=listProject()>List Of All Projects</button>
-</div>
 <div id="svg-container" class="center-col" style="text-align: center;">
   <svg id="svg-1" style="left: 0px; top: 0px; width: 100%; height: 100%; display: block; min-height: 605px; background-color: transparent; background-image: none;">
     <defs>
@@ -111,7 +63,7 @@ Project Management Personalization in IPLM
           <path d="M 528 108.88 L 524.5 101.88 L 528 103.63 L 531.5 101.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="50" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="50" width="90" height="40"  fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId1"></rect>
         </g>
         <g style="">
           <g>
@@ -135,7 +87,7 @@ Project Management Personalization in IPLM
           <path d="M 110 458.88 L 106.5 451.88 L 110 453.63 L 113.5 451.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="75" y="167.5" width="70" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="75" y="167.5" width="70" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId3"></rect>
         </g>
         <g style="">
           <g>
@@ -154,7 +106,7 @@ Project Management Personalization in IPLM
           <path d="M 375 168.88 L 371.5 161.88 L 375 163.63 L 378.5 161.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="110" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="110" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId4"></rect>
         </g>
         <g style="">
           <g>
@@ -178,7 +130,7 @@ Project Management Personalization in IPLM
           <path d="M 486.88 190 L 479.88 193.5 L 481.63 190 L 479.88 186.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="170" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="170" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId5"></rect>
         </g>
         <g style="">
           <g>
@@ -197,7 +149,7 @@ Project Management Personalization in IPLM
           <path d="M 375 288.88 L 371.5 281.88 L 375 283.63 L 378.5 281.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="230" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="230" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId6"></rect>
         </g>
         <g style="">
           <g>
@@ -221,7 +173,7 @@ Project Management Personalization in IPLM
           <path d="M 548 348.88 L 544.5 341.88 L 548 343.63 L 551.5 341.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="290" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="290" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId7"></rect>
         </g>
         <g style="">
           <g>
@@ -245,7 +197,7 @@ Project Management Personalization in IPLM
           <path d="M 304.12 370 L 311.12 366.5 L 309.37 370 L 311.12 373.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="350" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="350" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId8"></rect>
         </g>
         <g style="">
           <g>
@@ -264,7 +216,7 @@ Project Management Personalization in IPLM
           <path d="M 375 466.88 L 371.5 459.88 L 375 461.63 L 378.5 459.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="410" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="410" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId10"></rect>
         </g>
         <g style="">
           <g>
@@ -288,7 +240,7 @@ Project Management Personalization in IPLM
           <path d="M 496.88 484 L 489.88 487.5 L 491.63 484 L 489.88 480.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="468" width="90" height="32" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="468" width="90" height="32" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId11"></rect>
         </g>
         <g style="">
           <g>
@@ -307,7 +259,7 @@ Project Management Personalization in IPLM
           <path d="M 375 588.88 L 371.5 581.88 L 375 583.63 L 378.5 581.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="530" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="530" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId12"></rect>
         </g>
         <g style="">
           <g>
@@ -321,7 +273,7 @@ Project Management Personalization in IPLM
           </g>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="330" y="590" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="330" y="590" width="90" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId13"></rect>
         </g>
         <g style="">
           <g>
@@ -402,7 +354,7 @@ Project Management Personalization in IPLM
           <path d="M 618.88 130 L 611.88 133.5 L 613.63 130 L 611.88 126.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="488" y="110" width="80" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="488" y="110" width="80" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId2"></rect>
         </g>
         <g style="">
           <g>
@@ -449,7 +401,7 @@ Project Management Personalization in IPLM
           <path d="M 421.12 430 L 428.12 426.5 L 426.37 430 L 428.12 433.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"></path>
         </g>
         <g transform="translate(0.5,0.5)" style="visibility: visible;">
-          <rect x="488" y="350" width="120" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all"></rect>
+          <rect x="488" y="350" width="120" height="40" fill="#c5e0b4" stroke="#000000" pointer-events="all" id="categoryId9"></rect>
         </g>
         <g style="">
           <g>
@@ -500,9 +452,6 @@ Project Management Personalization in IPLM
       <g></g>
     </g>
   </svg>
-</div>
-<div class="right-col">
-  <button class="btnChart" (click)=addProject() >Add New Project</button>
 </div>
 </div>
 </div>

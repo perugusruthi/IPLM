@@ -56,6 +56,7 @@ import {AddProjectComponent} from './add-project/add-project.component';
 import {AddProjectPopupComponent} from './add-project-popup/add-project-popup.component';
 import { ListProjectComponent } from './list-project/list-project.component';
 import { ListProjectPopupComponent } from './list-project-popup/list-project-popup.component';
+import { ProjectsListFlowchartComponent } from './projects-list-flowchart/projects-list-flowchart.component';
 
 
 const appRoutes: Routes = [
@@ -98,7 +99,8 @@ const appRoutes: Routes = [
     MessageboxComponent,
     ProjectRealFlowchartComponent,
     ListProjectComponent,
-    ListProjectPopupComponent
+    ListProjectPopupComponent,
+    ProjectsListFlowchartComponent
   ],
   imports: [
     BrowserModule,

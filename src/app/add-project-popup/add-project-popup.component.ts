@@ -47,6 +47,7 @@ export class AddProjectPopupComponent implements OnInit {
     console.log('***popup********')
     this.service.addProject(form.value).subscribe(addproject => {
       this.addproject = addproject;
+      this.onNoClick();
     });
    // this.insertRecord(form);
    // console.log('*******************', form.value);

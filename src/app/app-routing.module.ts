@@ -6,6 +6,8 @@ import { ProjectsListComponent } from './projects-list/projects-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectFlowchartComponent } from './project-flowchart/project-flowchart.component';
 import { ProjectRealFlowchartComponent } from './project-real-flowchart/project-real-flowchart.component';
+import { ProjectsListFlowchartComponent } from './projects-list-flowchart/projects-list-flowchart.component';
+
 
 
 const routes: Routes = [
@@ -24,6 +26,10 @@ const routes: Routes = [
   {
     path: 'projects/projectID/:id',
     component: ProjectDetailsComponent
+  },
+  {
+    path: 'projects/category/flowchart/:id',
+    component: ProjectsListFlowchartComponent
   },
   {
     path: '',

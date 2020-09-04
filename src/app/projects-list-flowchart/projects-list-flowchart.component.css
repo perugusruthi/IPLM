@@ -1,0 +1,21 @@
+.navbar-default {
+    background-color: rgba(42, 44, 44, 0.651);
+    
+}
+  
+  table {
+    width: 100%;
+  }
+    
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+    
+  td, th {
+    width: 25%;
+  }
+
+  .pointerCursor {
+    cursor: pointer;
+  }

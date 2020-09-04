@@ -25,12 +25,27 @@
   margin-top: 2%;
   float: right;
 }
+.navbar-default {
+  background-color: rgba(42, 44, 44, 0.651);
 
- table, th , td {
-   border: 1px solid grey;
-   border-collapse: collapse;
-   padding: 5px;
- }
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.pointerCursor {
+  cursor: pointer;
+}
 
 table tr:nth-child(odd) {
   background-color: #f1f1f1;

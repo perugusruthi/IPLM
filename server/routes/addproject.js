@@ -13,6 +13,7 @@ router.post('/addproject',(req,res)=>{
     ProjectDate: req.body.ProjectDate,
     CategoryID: req.body.CategoryID,
     Project_Catchphrases: req.body.Project_Catchphrases,
+    ProjectId:null
   };
  // let projectentry = JSON.stringify(data);
   var obj = JSON.parse(fs.readFileSync('projectdata.json', 'utf8'));
@@ -20,8 +21,15 @@ router.post('/addproject',(req,res)=>{
   var objarr =[];
   objarr = obj;
   objarr.push(data);
+
+  for (i = 0; i < objarr.length; i++) {
+    objarr[i]['ProjectId'] =i+1;
+  }
+
+  console.log("******************",objarr)
   let projectentry = JSON.stringify(objarr);
-fs.writeFileSync('projectdata.json', projectentry, function (err) {
+
+  fs.writeFileSync('projectdata.json', projectentry, function (err) {
     if (err) throw err;
   });
 
