@@ -20,7 +20,7 @@ export interface Category {
 export class AddProjectComponent implements OnInit {
 
   constructor(public dailogRef: MatDialogRef<AddProjectPopupComponent>,
-              private _router: Router, public service: ProjectService) { }
+              private router: Router, public service: ProjectService) { }
   addproject: any = [];
 
    category: Category[] = [

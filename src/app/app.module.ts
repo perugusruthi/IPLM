@@ -49,7 +49,7 @@ import {DataService} from './services/data.service';
 import {ProjectsListComponent} from './projects-list/projects-list.component';
 import { ExpansionStepsExampleComponent } from './expansion-steps-example/expansion-steps-example.component';
 import { MessageboxComponent } from './messagebox/messagebox.component';
-import { CreateProjectPopupComponent } from './create-project-popup/create-project-popup.component'
+import { CreateProjectPopupComponent } from './create-project-popup/create-project-popup.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ProjectRealFlowchartComponent } from './project-real-flowchart/project-real-flowchart.component';
 import {AddProjectComponent} from './add-project/add-project.component';
